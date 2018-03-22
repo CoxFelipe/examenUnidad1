@@ -1,0 +1,103 @@
+import java.security.PrivateKey;
+import javax.swing.*;
+import javax.xml.soap.Text;
+import java.awt.*;
+import com.sun.deploy.config.JCPConfig;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JLabel;
+import javax.swing.JComponent;
+import javax.swing.JFrame;
+import  java.util.Scanner;
+
+
+public class exa extends JFrame {
+
+
+
+
+        private JButton btnAceptar;
+
+        public exa (String titulo) {
+            this.setTitle(titulo);
+            this.setResizable(false);
+            this.setLayout(null);
+            Container panelPrinc = this.getContentPane();
+            panelPrinc.setBackground(Color.white);
+            this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+            JLabel lblDinero = new JLabel("Introducir el numero: ");
+            lblDinero.setBounds(10, 10, 140, 30);
+            panelPrinc.add(lblDinero);
+
+            JTextField num;
+
+            num = new JTextField();
+            num.setBounds(180, 10, 100, 30);
+            panelPrinc.add(num);
+
+
+            JLabel lblim1 = new JLabel();
+            lblim1.setBounds(8, 2, 220, 156);
+            panelPrinc.add(lblim1);
+
+
+
+                Scanner sc=new Scanner(System.in);
+                int nume,dia,hor,min,seg;
+        System.out.println("ingrese los segundos ");
+                nume=sc.nextInt();
+                dia=nume/86400;
+                hor=(nume-(86400*dia))/3600;
+                min=(nume-(3600*hor))/60;
+                seg=nume-((hor*3600)+(min*60));
+
+
+
+
+
+
+
+
+
+
+            //Creación de objetos que generan eventos
+            btnAceptar = new JButton("Eliminar");
+            btnAceptar.setBounds(60, 110, 140, 30);
+            panelPrinc.add(btnAceptar);
+
+
+
+        }
+
+
+    public static void main(String[] args)
+    {
+        exa f = new exa ("Sala de Cine");
+        f.setSize(1200,766);
+        f.setLocation(90,0);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setVisible(true);
+
+
+
+    }
+    class AccionBoton implements ActionListener {
+
+        @Override
+        //Método controlador del evento actionPerformed
+        public void actionPerformed(ActionEvent e) {
+
+
+            System.out.println("n " );
+        }
+    }
+
+
+
+
+
+
+}
+
+
