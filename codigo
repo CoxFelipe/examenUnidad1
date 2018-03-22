@@ -73,7 +73,7 @@ public class exa extends JFrame {
 
     public static void main(String[] args)
     {
-        exa f = new exa ("Sala de Cine");
+        exa f = new exa ("examen");
         f.setSize(1200,766);
         f.setLocation(90,0);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
